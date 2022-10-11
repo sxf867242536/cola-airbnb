@@ -6,6 +6,7 @@ module.exports = {
   extends: [
     'plugin:react/recommended',
     'airbnb',
+    'plugin:import/recommended',
   ],
   overrides: [
   ],
@@ -18,5 +19,16 @@ module.exports = {
   ],
   rules: {
     'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx'] }],
+  },
+  settings: {
+    'import/resolver': {
+      alias: {
+        map: [
+          ['@', './src/'],
+          ['components', './src/components/'],
+        ],
+        extensions: ['.js', '.jsx'],
+      },
+    },
   },
 };
