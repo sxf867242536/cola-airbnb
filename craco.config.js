@@ -1,4 +1,5 @@
 const path = require('path');
+const CracoLessPlugin = require('craco-less');
 
 const resolve = (pathName) => path.resolve(__dirname, pathName);
 module.exports = {
@@ -9,4 +10,9 @@ module.exports = {
       utils: resolve('src/utils'),
     },
   },
+  plugins: [
+    {
+      plugin: CracoLessPlugin,
+    },
+  ],
 };

@@ -1,7 +1,7 @@
 import React, { memo } from 'react';
 
 const Home = memo(() => (
-  <div>index</div>
+  <div>Home</div>
 ));
 
 export default Home;

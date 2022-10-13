@@ -1,12 +1,12 @@
 import React, { memo } from 'react';
-import Home from 'components/home';
+import { useRoutes } from 'react-router-dom';
+import routes from './router';
 
 const App = memo(() => (
-  <div>
-    <h1 className="text-3xl font-bold underline">
-      Hello world!
-    </h1>
-    <Home />
+  <div className="app">
+    <div className="header">header</div>
+    <div className="page">{useRoutes(routes)}</div>
+    <div className="footer">footer</div>
   </div>
 ));
 
