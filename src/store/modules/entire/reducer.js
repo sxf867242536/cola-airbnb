@@ -2,8 +2,7 @@ const initialState = {};
 function reducer(state = initialState, { type, payload }) {
   switch (type) {
     default:
-      console.log(state, payload);
-      break;
+      return { ...state, payload };
   }
 }
 export default reducer;
