@@ -19,6 +19,7 @@ module.exports = {
   rules: {
     'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx'] }],
     'default-param-last': 0,
+    'no-debugger': 0,
   },
   settings: {
     'import/resolver': {
