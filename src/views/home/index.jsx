@@ -1,3 +1,4 @@
+import SectionHeader from '@/components/section-header';
 import { fetchHomeDataAction } from '@/store/modules/home';
 import React, { memo, useEffect } from 'react';
 import { shallowEqual, useDispatch, useSelector } from 'react-redux';
@@ -16,10 +17,9 @@ const Home = memo(() => {
     <HomeWrapper>
       <HomeBanner />
       <div className="content">
-        <h2>{goodPriceInfo.title}</h2>
-        <ul>
-          {goodPriceInfo.list?.map((item) => <li>{item.name}</li>)}
-        </ul>
+        <div className="good-price">
+          <SectionHeader title={goodPriceInfo.title} subtitle="somethings......" />
+        </div>
       </div>
     </HomeWrapper>
   );
