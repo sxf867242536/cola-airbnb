@@ -21,6 +21,15 @@ module.exports = {
     'default-param-last': 0,
     'no-debugger': 0,
     'jsx-a11y/no-static-element-interactions': 0,
+    'no-param-reassign': [
+      'error',
+      {
+        props: true,
+        ignorePropertyModificationsFor: [
+          'state', // for vuex state
+        ],
+      },
+    ],
   },
   settings: {
     'import/resolver': {
