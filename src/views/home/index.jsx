@@ -18,7 +18,7 @@ const Home = memo(() => {
       <HomeBanner />
       <div className="content">
         <div className="good-price">
-          <SectionHeader title={goodPriceInfo.title} subtitle="somethings......" />
+          <SectionHeader title={goodPriceInfo.title} subtitle={goodPriceInfo.subtitle} />
         </div>
       </div>
     </HomeWrapper>
