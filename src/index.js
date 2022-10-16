@@ -6,6 +6,7 @@ import { ThemeProvider } from 'styled-components';
 import App from '@/App';
 import store from './store';
 import './index.css';
+import '@/assets/css/common.less';
 import theme from './assets/theme';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
