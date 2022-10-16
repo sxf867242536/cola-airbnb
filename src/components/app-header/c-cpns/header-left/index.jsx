@@ -1,6 +1,6 @@
 import IconLogo from '@/assets/svg/icon_logo';
 import React, { memo } from 'react';
-import LeftWrapper from './styled';
+import LeftWrapper from './style';
 
 const HeaderLeft = memo(() => (
   <LeftWrapper>

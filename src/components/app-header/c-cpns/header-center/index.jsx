@@ -1,6 +1,6 @@
 import IconSearch from '@/assets/svg/icon_search';
 import React, { memo } from 'react';
-import CenterWrapper from './styled';
+import CenterWrapper from './style';
 
 const HeaderCenter = memo(() => (
   <CenterWrapper>
