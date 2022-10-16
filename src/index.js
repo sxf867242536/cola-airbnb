@@ -5,9 +5,10 @@ import { Provider } from 'react-redux';
 import { ThemeProvider } from 'styled-components';
 import App from '@/App';
 import store from './store';
-import './index.css';
 import '@/assets/css/common.less';
+import './index.css';
 import theme from './assets/theme';
+import 'antd/dist/antd.less';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

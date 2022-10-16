@@ -16,7 +16,9 @@ const AppFooterWrapper = styled.div`
       font-weight: 600;
     }
     li {
-      color: #767676;
+      a {
+        color: #767676;
+      }
     }
   }
 `;
