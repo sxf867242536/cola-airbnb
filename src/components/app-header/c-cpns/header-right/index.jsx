@@ -1,7 +1,7 @@
+import React, { memo, useState, useEffect } from 'react';
 import IconAvatar from '@/assets/svg/icon_avatar';
 import IconGlobal from '@/assets/svg/icon_global';
 import IconMenu from '@/assets/svg/icon_menu';
-import React, { memo, useState, useEffect } from 'react';
 import RightWrapper from './style';
 
 const HeaderRight = memo(() => {
@@ -32,17 +32,17 @@ const HeaderRight = memo(() => {
         <IconMenu />
         <IconAvatar />
         {showPanel && (
-        <div className="panel">
-          <div className="top">
-            <div className="item register">注册</div>
-            <div className="item login">登陆</div>
+          <div className="panel">
+            <div className="top">
+              <div className="item register">注册</div>
+              <div className="item login">登陆</div>
+            </div>
+            <div className="bottom">
+              <div className="item ">出租房源</div>
+              <div className="item ">开展体验</div>
+              <div className="item ">帮助</div>
+            </div>
           </div>
-          <div className="bottom">
-            <div className="item ">出租房源</div>
-            <div className="item ">开展体验</div>
-            <div className="item ">帮助</div>
-          </div>
-        </div>
         )}
       </div>
     </RightWrapper>

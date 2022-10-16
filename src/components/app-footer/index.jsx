@@ -6,10 +6,14 @@ const AppFooter = memo(() => (
   <AppFooterWrapper>
     <div className="footer-items">
       {footerData.map((item) => (
-        <div className="footer-item">
+        <div className="footer-item" key={item.name}>
           <div className="header">{item.name}</div>
           <ul>
-            {item.list.map((url) => <li><a href="www.baidu.com">{url}</a></li>)}
+            {item.list.map((url) => (
+              <li key={url}>
+                <a href="www.baidu.com">{url}</a>
+              </li>
+            ))}
           </ul>
         </div>
       ))}

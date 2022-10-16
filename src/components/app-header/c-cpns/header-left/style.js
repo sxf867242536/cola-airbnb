@@ -5,10 +5,9 @@ const LeftWrapper = styled.div`
   color: ${(props) => props.theme.color.primaryColor};
   display: flex;
   align-items: center;
-  .logo{
+  .logo {
     cursor: pointer;
     margin-left: 24px;
   }
-
 `;
 export default LeftWrapper;

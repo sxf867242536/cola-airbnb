@@ -1,5 +1,5 @@
-import getHomeGoodPriceData from '@/services/modules/home';
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
+import getHomeGoodPriceData from '@/services/modules/home';
 
 export const fetchHomeDataAction = createAsyncThunk('fetchdata', async () => {
   const res = await getHomeGoodPriceData();

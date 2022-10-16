@@ -9,19 +9,19 @@ const RightWrapper = styled.div`
   font-size: 14px;
   color: ${(props) => props.theme.textColor.primaryColor};
   margin-right: 24px;
-  .btns{
+  .btns {
     display: flex;
     align-items: center;
-    .btn{
+    .btn {
       padding: 12px 15px;
       cursor: pointer;
       border-radius: 22px;
-      &:hover{
+      &:hover {
         background-color: #f5f5f5;
       }
     }
   }
-  .profile{
+  .profile {
     position: relative;
     display: flex;
     width: 77px;
@@ -35,27 +35,28 @@ const RightWrapper = styled.div`
     cursor: pointer;
     color: #999;
     ${(props) => props.theme.mixin.boxShdow}
-    .panel{
+    .panel {
       position: absolute;
       right: 0;
       top: 60px;
       width: 240px;
       background-color: #fff;
-      box-shadow: 0 0 6px rgba(0,0,0,.18);
+      box-shadow: 0 0 6px rgba(0, 0, 0, 0.18);
       border-radius: 10px;
       color: #666;
-      .top,.bottom{
+      .top,
+      .bottom {
         padding: 10px 0;
-        .item{
+        .item {
           height: 40px;
           line-height: 40px;
           padding: 0 16px;
-          &:hover{
+          &:hover {
             background-color: #f5f5f5;
           }
         }
       }
-      .top{
+      .top {
         border-bottom: 1px solid #ddd;
       }
     }

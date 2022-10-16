@@ -7,7 +7,10 @@ class AirbnbRequest {
       baseURL,
       timeout,
     });
-    this.instance.interceptors.response.use((res) => res.data, (err) => err);
+    this.instance.interceptors.response.use(
+      (res) => res.data,
+      (err) => err,
+    );
   }
 
   requset(config) {

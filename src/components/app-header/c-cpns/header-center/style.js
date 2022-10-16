@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const CenterWrapper = styled.div`
-  .search-bar{
+  .search-bar {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -13,12 +13,12 @@ const CenterWrapper = styled.div`
     border-radius: 24px;
     cursor: pointer;
     ${(props) => props.theme.mixin.boxShadow}
-    .text{
+    .text {
       padding: 0 16px;
       color: #222;
       font-weight: 600;
     }
-    .icon{
+    .icon {
       display: flex;
       align-items: center;
       justify-content: center;
@@ -29,6 +29,5 @@ const CenterWrapper = styled.div`
       background-color: ${(props) => props.theme.color.primaryColor};
     }
   }
-
 `;
 export default CenterWrapper;
