@@ -33,6 +33,7 @@ const RightWrapper = styled.div`
     background-color: #fff;
     cursor: pointer;
     color: #999;
+    ${(props) => props.theme.mixin.boxShdow}
   }
 `;
 export default RightWrapper;
