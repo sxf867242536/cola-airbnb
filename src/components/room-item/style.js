@@ -25,7 +25,7 @@ const RoomItemWrapper = styled.div`
     margin: 10px 0 5px;
     font-size: 12px;
     font-weight: 700;
-    color: #39576a;
+    color: ${(props) => props.verifyColor};
   }
   .name {
     font-size: 16px;

@@ -6,7 +6,7 @@ const RoomItem = memo((props) => {
   const { itemData } = props;
 
   return (
-    <RoomItemWrapper>
+    <RoomItemWrapper verifyColor={itemData?.verify_info?.text_color || '#39576a'}>
       <div className="inner">
         <div className="cover">
           <img src={itemData.picture_url} alt="" />
@@ -25,6 +25,7 @@ RoomItem.propTypes = {
     picture_url: PropTypes.string,
     verify_info: PropTypes.shape({
       messages: PropTypes.arrayOf(PropTypes.string),
+      text_color: PropTypes.string,
     }),
     price_format: PropTypes.string,
   }),
