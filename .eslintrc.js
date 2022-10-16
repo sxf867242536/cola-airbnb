@@ -20,6 +20,7 @@ module.exports = {
     'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx'] }],
     'default-param-last': 0,
     'no-debugger': 0,
+    'jsx-a11y/no-static-element-interactions': 0,
   },
   settings: {
     'import/resolver': {
