@@ -4,7 +4,7 @@ import LeftWrapper from './styled';
 
 const HeaderLeft = memo(() => (
   <LeftWrapper>
-    <IconLogo />
+    <div className="logo"><IconLogo /></div>
   </LeftWrapper>
 ));
 
