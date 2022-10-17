@@ -1,6 +1,5 @@
 import React, { memo, useEffect } from 'react';
 import { shallowEqual, useDispatch, useSelector } from 'react-redux';
-import { Button } from 'antd';
 import RoomItem from '@/components/room-item';
 import SectionHeader from '@/components/section-header';
 import { fetchHomeDataAction } from '@/store/modules/home';
@@ -31,17 +30,6 @@ const Home = memo(() => {
           ))}
         </ul>
       </div>
-      {/* <Stack direction="row" spacing={2}>
-        <Button>Primary</Button>
-        <Button disabled>Disabled</Button>
-        <Button href="#text-buttons">Link</Button>
-      </Stack> */}
-      <Button type="primary">Primary Button</Button>
-      <Button>Default Button</Button>
-      <Button type="dashed">Dashed Button</Button>
-      <br />
-      <Button type="text">Text Button</Button>
-      <Button type="link">Link Button</Button>
     </HomeWrapper>
   );
 });

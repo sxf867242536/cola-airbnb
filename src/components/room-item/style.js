@@ -47,8 +47,11 @@ const RoomItemWrapper = styled.div`
     .count {
       margin: 0 2px 0 4px;
     }
-    .MuiRating-decimal {
+    .MuiRating-icon {
       margin-right: -3px;
+    }
+    .extra {
+      color: ${(props) => props.contentColor};
     }
   }
 `;
