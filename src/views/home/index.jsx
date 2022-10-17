@@ -1,8 +1,8 @@
 import React, { memo, useEffect } from 'react';
 import { shallowEqual, useDispatch, useSelector } from 'react-redux';
-import RoomItem from '@/components/room-item';
 import SectionHeader from '@/components/section-header';
 import { fetchHomeDataAction } from '@/store/modules/home';
+import SectionRooms from '@/components/section-rooms';
 import HomeBanner from './c-cnps/home-banner';
 import HomeWrapper from './style';
 
@@ -23,12 +23,8 @@ const Home = memo(() => {
       <div className="content">
         <div className="goodPrice">
           <SectionHeader title={goodPriceInfo.title} subtitle={goodPriceInfo.subtitle} />
+          <SectionRooms list={goodPriceInfo.list} />
         </div>
-        <ul className="room-list">
-          {goodPriceInfo.list?.slice(0, 8).map((item) => (
-            <RoomItem itemData={item} key={item.id} />
-          ))}
-        </ul>
       </div>
     </HomeWrapper>
   );
