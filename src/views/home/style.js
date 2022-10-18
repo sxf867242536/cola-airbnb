@@ -6,8 +6,5 @@ const HomeWrapper = styled.div`
     margin: 0 auto;
     margin-top: 32px;
   }
-  .good-price {
-    margin-top: 30px;
-  }
 `;
 export default HomeWrapper;

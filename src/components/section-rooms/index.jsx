@@ -17,21 +17,23 @@ const SectionRooms = memo((props) => {
 });
 
 SectionRooms.propTypes = {
-  list: PropTypes.arrayOf({
-    name: PropTypes.string,
-    picture_url: PropTypes.string,
-    verify_info: PropTypes.shape({
-      messages: PropTypes.arrayOf(PropTypes.string),
-      text_color: PropTypes.string,
+  list: PropTypes.arrayOf(
+    PropTypes.shape({
+      name: PropTypes.string,
+      picture_url: PropTypes.string,
+      verify_info: PropTypes.shape({
+        messages: PropTypes.arrayOf(PropTypes.string),
+        text_color: PropTypes.string,
+      }),
+      price_format: PropTypes.string,
+      star_rating: PropTypes.number,
+      reviews_count: PropTypes.number,
+      bottom_info: PropTypes.shape({
+        content: PropTypes.string,
+        content_color: PropTypes.string,
+      }),
     }),
-    price_format: PropTypes.string,
-    star_rating: PropTypes.number,
-    reviews_count: PropTypes.number,
-    bottom_info: PropTypes.shape({
-      content: PropTypes.string,
-      content_color: PropTypes.string,
-    }),
-  }),
+  ),
 };
 SectionRooms.defaultProps = {
   list: [],
