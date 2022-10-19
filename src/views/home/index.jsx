@@ -1,6 +1,10 @@
 import React, { memo, useEffect } from 'react';
 import { shallowEqual, useDispatch, useSelector } from 'react-redux';
-import { fetchHomeGoodPriceDataAction, fetchHomeHighScoreDataAction } from '@/store/modules/home';
+import {
+  fetchHomeDiscountDataAction,
+  fetchHomeGoodPriceDataAction,
+  fetchHomeHighScoreDataAction,
+} from '@/store/modules/home';
 import HomeBanner from './c-cnps/home-banner';
 import HomeWrapper from './style';
 import HomeSectionV1 from './c-cnps/home-section-v1';
@@ -10,6 +14,7 @@ const Home = memo(() => {
     (state) => ({
       goodPriceInfo: state.home.goodPriceInfo,
       highScoreInfo: state.home.highScoreInfo,
+      discountInfo: state.home.discountInfo,
     }),
     shallowEqual,
   );
@@ -19,6 +24,9 @@ const Home = memo(() => {
   }, [dispatch]);
   useEffect(() => {
     dispatch(fetchHomeHighScoreDataAction());
+  }, [dispatch]);
+  useEffect(() => {
+    dispatch(fetchHomeDiscountDataAction());
   }, [dispatch]);
   return (
     <HomeWrapper>
