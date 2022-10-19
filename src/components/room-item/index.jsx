@@ -4,11 +4,12 @@ import Rating from '@mui/material/Rating';
 import RoomItemWrapper from './style';
 
 const RoomItem = memo((props) => {
-  const { itemData } = props;
+  const { itemData, itemWidth } = props;
   return (
     <RoomItemWrapper
       verifyColor={itemData?.verify_info?.text_color || '#39576a'}
       contentColor={itemData?.bottom_info?.content_color}
+      itemWidth={itemWidth}
     >
       <div className="inner">
         <div className="cover">
@@ -51,8 +52,10 @@ RoomItem.propTypes = {
       content_color: PropTypes.string,
     }),
   }),
+  itemWidth: PropTypes.string,
 };
 RoomItem.defaultProps = {
   itemData: {},
+  itemWidth: '25%',
 };
 export default RoomItem;

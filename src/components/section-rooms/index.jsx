@@ -4,12 +4,12 @@ import RoomItem from '../room-item';
 import SectionRoomsWrapper from './style';
 
 const SectionRooms = memo((props) => {
-  const { list } = props;
+  const { list, itemWidth } = props;
   return (
     <SectionRoomsWrapper>
       <ul className="room-list">
         {list?.slice(0, 8).map((item) => (
-          <RoomItem itemData={item} key={item.id} />
+          <RoomItem itemData={item} key={item.id} itemWidth={itemWidth} />
         ))}
       </ul>
     </SectionRoomsWrapper>
@@ -17,26 +17,12 @@ const SectionRooms = memo((props) => {
 });
 
 SectionRooms.propTypes = {
-  list: PropTypes.arrayOf(
-    PropTypes.shape({
-      name: PropTypes.string,
-      picture_url: PropTypes.string,
-      verify_info: PropTypes.shape({
-        messages: PropTypes.arrayOf(PropTypes.string),
-        text_color: PropTypes.string,
-      }),
-      price_format: PropTypes.string,
-      star_rating: PropTypes.number,
-      reviews_count: PropTypes.number,
-      bottom_info: PropTypes.shape({
-        content: PropTypes.string,
-        content_color: PropTypes.string,
-      }),
-    }),
-  ),
+  list: PropTypes.arrayOf(PropTypes.shape({})),
+  itemWidth: PropTypes.string,
 };
 SectionRooms.defaultProps = {
   list: [],
+  itemWidth: '25%',
 };
 
 export default SectionRooms;
