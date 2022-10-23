@@ -12,6 +12,11 @@ export function getHomeHighScoreData() {
 }
 export function getHomeDiscountData() {
   return AirbnbRequest.get({
-    url: 'home/discount',
+    url: '/home/discount',
+  });
+}
+export function getHomeHotRecommenddest() {
+  return AirbnbRequest.get({
+    url: '/home/hotrecommenddest',
   });
 }

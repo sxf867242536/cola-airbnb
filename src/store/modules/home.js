@@ -3,6 +3,7 @@ import {
   getHomeDiscountData,
   getHomeGoodPriceData,
   getHomeHighScoreData,
+  getHomeHotRecommenddest,
 } from '@/services/modules/home';
 
 export const fetchHomeGoodPriceDataAction = createAsyncThunk('fetchHomeGoodPriceData', async () => {
@@ -17,12 +18,20 @@ export const fetchHomeDiscountDataAction = createAsyncThunk('fetchHomeDiscountDa
   const res = await getHomeDiscountData();
   return res;
 });
+export const fetchHomeHotRecommenddestAction = createAsyncThunk(
+  'fetchHomeHotRecommenddest',
+  async () => {
+    const res = await getHomeHotRecommenddest();
+    return res;
+  },
+);
 const homeSlice = createSlice({
   name: 'home',
   initialState: {
     goodPriceInfo: {},
     highScoreInfo: {},
     discountInfo: {},
+    hotRecommenddestInfo: {},
   },
   reducers: {
     changeGoodPriceInfoAction(state, { payload }) {
@@ -34,6 +43,9 @@ const homeSlice = createSlice({
     changeDiscountInfoAction(state, { payload }) {
       state.discountInfo = payload;
     },
+    changeHotRecommenddestInfoAction(state, { payload }) {
+      state.hotRecommenddest = payload;
+    },
   },
   extraReducers: {
     [fetchHomeGoodPriceDataAction.fulfilled](state, { payload }) {
@@ -44,6 +56,9 @@ const homeSlice = createSlice({
     },
     [fetchHomeDiscountDataAction.fulfilled](state, { payload }) {
       state.discountInfo = payload;
+    },
+    [fetchHomeHotRecommenddestAction.fulfilled](state, { payload }) {
+      state.hotRecommenddestInfo = payload;
     },
   },
 });
