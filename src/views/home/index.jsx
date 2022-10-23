@@ -5,10 +5,11 @@ import {
   fetchHomeGoodPriceDataAction,
   fetchHomeHighScoreDataAction,
 } from '@/store/modules/home';
-import SectionTabs from '@/components/section-tabs';
+import isEmptyObject from '@/uitls';
 import HomeBanner from './c-cnps/home-banner';
 import HomeWrapper from './style';
 import HomeSectionV1 from './c-cnps/home-section-v1';
+import HomeSectionV2 from './c-cnps/home-section-v2';
 
 const Home = memo(() => {
   const { goodPriceInfo, highScoreInfo, discountInfo } = useSelector(
@@ -29,15 +30,15 @@ const Home = memo(() => {
   useEffect(() => {
     dispatch(fetchHomeDiscountDataAction());
   }, [dispatch]);
-  const tabNames = discountInfo.dest_address?.map((item) => item.name);
+
   return (
     <HomeWrapper>
       <HomeBanner />
 
       <div className="content">
-        <HomeSectionV1 infoData={goodPriceInfo} />
-        <SectionTabs infoData={discountInfo} itemWidth="33.3333%" tabNames={tabNames} />
-        <HomeSectionV1 infoData={highScoreInfo} />
+        {isEmptyObject(discountInfo) && <HomeSectionV2 infoData={discountInfo} />}
+        {isEmptyObject(goodPriceInfo) && <HomeSectionV1 infoData={goodPriceInfo} />}
+        {isEmptyObject(highScoreInfo) && <HomeSectionV1 infoData={highScoreInfo} />}
       </div>
     </HomeWrapper>
   );
