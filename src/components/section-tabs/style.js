@@ -5,9 +5,9 @@ const SectionTabsWrapper = styled.div`
     display: flex;
     width: 100%;
     .item {
-      flex: 1;
-      box-sizing: border-box;
+      flex-basis: 120px;
       flex-shrink: 0;
+      box-sizing: border-box;
       padding: 14px 16px;
       margin-right: 16px;
       border-radius: 3px;

@@ -4,11 +4,12 @@ import { HashRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import { ThemeProvider } from 'styled-components';
 import App from '@/App';
-import store from './store';
-import '@/assets/css/common.less';
-import './index.css';
-import theme from './assets/theme';
 import 'antd/dist/antd.less';
+import './index.css';
+import '@/assets/css/index.less';
+
+import store from './store';
+import theme from './assets/theme';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
